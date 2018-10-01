@@ -1,0 +1,81 @@
+.detail-list-one-container {
+  .user-image {
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .username {
+    background-color: #fff;
+    padding: 14px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .user-info {
+    padding: 10px 20px;
+    .list {
+      li {
+        color: #2c2c2c;
+        @include rem('font-size', 14);
+        padding: 5px 0;
+      }
+    }
+  }
+  .list-girl-content {
+    padding: 17px 20px;
+  }
+  .list-girl-image {
+    overflow: hidden;
+    .item {
+      float: left;
+      overflow: hidden;
+      width: 33.33333333%;
+      .image {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+        height: 117px;
+      }
+      img {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+  .blog-list-container {
+    background-color: #fff;
+    .row {
+      clear: both;
+    }
+    .favourite {
+      float: right;
+    }
+    .image {
+      width: 138px;
+      height: 96px;
+    }
+    .content {
+      .title {
+        @include rem('font-size', 14);
+      }
+    }
+  }
+  .link-container {
+    .wrap-button {
+      background-color: #f8f8f8;
+    }
+    .button-more-info {
+      background-color: $primary-color;
+    }
+    .button {
+      background-color: #fff;
+      min-height: 45px;
+      @include rem('line-height', 45);
+      .ficon {
+        margin-top: 14px;
+      }
+    }
+  }
+}

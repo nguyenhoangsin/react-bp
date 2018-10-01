@@ -1,0 +1,164 @@
+.search-container {
+  background-color: #fff;
+  .search-form {
+    .input-group {
+      position: relative;
+    }
+    .ficon {
+      color: $primary-color;
+      position: absolute;
+      left: 18px;
+      top: 16px;
+      font-size: 18px;
+      z-index: 10;
+    }
+    .input-control {
+      padding-left: 50px;
+    }
+  }
+  .budget-filter {
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 20px;
+    .budget-content {
+      display: flex;
+      @include justify-content(space-between);
+      @include align-items(center);
+
+      .select-picker {
+        border: 1px solid #e8e8e8;
+      }
+    }
+    .ficon {
+      color: $primary-color;
+    }
+    label {
+      color: #333;
+      @include rem('font-size', 13);
+      padding: 0 15px 0 0;
+    }
+    .line {
+      border-top: 1px solid #999;
+      display: block;
+      width: 10px;
+    }
+  }
+  .select-picker {
+    color: #fff;
+    .select2-container .select2-selection--single, .Select-control {
+      background-color: #fff;
+      border: 1px solid #e8e8e8;
+      border-radius: 2px;
+      height: 40px;
+      @include rem('font-size', 12);
+      padding: 5px 10px;
+    }
+    .Select-control {
+      height: 50px;
+      .Select-placeholder, .Select-input, .Select-value {
+        padding-left: 50px;
+        padding-top: 9px;
+        font-size: 12px;
+      }
+
+      .Select-input {
+        padding-top: 3px;
+        padding-left: 40px;
+      }
+    }
+    .Select-input {
+      padding: 0;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__arrow, .Select-arrow {
+      border: none;
+      margin-top: -8px;
+      &::after {
+        font-family: 'hotessbar';
+        content: "\e921";
+        color: #8b8b8b;
+        font-size: 9px;
+      }
+    }
+  }
+  .list-checkbox {
+    label.title {
+      color: #333;
+      @include rem('font-size', 13);
+      width: 150px;
+    }
+    .ficon {
+      color: $primary-color;
+      margin-right: 10px;
+    }
+    .item {
+      padding: 13px 20px;
+      border-bottom: 1px solid #e8e8e8;
+      display: flex;
+      @include justify-content(space-between);
+      @include align-items(center);
+      white-space: nowrap;
+      .checkbox-custom {
+        label.checkbox-label {
+          padding-left: 5px;
+          display: inline-block;
+          margin: 0;
+        }
+        .check {
+          border-radius: 2px;
+          &::before {
+            color: #fff;
+            font-size: 9px;
+          }
+        }
+        input {
+          visibility:hidden;
+        }
+
+        input[type=radio]:checked ~ .check {
+          background-color: $primary-color;
+          border-color: $primary-color;
+        }
+      }
+    }
+  }
+  .group-button {
+    padding: 20px;
+    overflow: hidden;
+    .button-action {
+      background-color: $primary-color;
+      border-radius: 3px;
+      color: #fff;
+      @include rem('font-size', 13);
+      float: left;
+      margin-right: 4%;
+      overflow: hidden;
+      text-align: center;
+      width: 48%;
+      height: 40px;
+      display: flex;
+      @include align-items(center);
+      @include justify-content(center);
+      flex-direction: column;
+      span {
+        order: 2;
+        display: block;
+      }
+    }
+  }
+  .link-container {
+    background-color: #f5f5f5;
+    padding: 10px 0 0;
+    .button {
+      background-color: #fff;
+      min-height: 40px;
+      @include rem('line-height', 40);
+      .ficon {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.Select-menu-outer {
+  z-index: 10;
+}

@@ -1,0 +1,32 @@
+.free-detail-container {
+  .category-container {
+    .category-list {
+      .item {
+        width: 25%;
+      }
+    }
+  }
+  .slider-image-container {
+    .slider-content {
+      padding: 20px 0;
+    }
+    .item {
+      padding: 0 6px;
+      .image {
+        background-position: center;
+        background-size: cover;
+        height: 90px;
+        overflow: hidden;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    .slick-arrow {
+      display: none !important;
+    }
+  }
+}

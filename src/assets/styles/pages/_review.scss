@@ -1,0 +1,100 @@
+.main-container {
+  .reviews-container {
+    background-color: transparent;
+  }
+}
+.reviews-container {
+  .reviews-list {
+    .button-favourite {
+      @extend .reset-input;
+      color: #9d9d9d;
+      font-size: 25px;
+      float: right;
+      margin-top: 5px;
+    }
+    .item {
+      background-color: #fff;
+      padding: 12px 20px;
+      margin-bottom: 10px;
+    }
+    .title {
+      color: #333;
+      @include rem('font-size', 15);
+      padding-bottom: 5px;
+    }
+    .text {
+      color: #666;
+      @include rem('font-size', 13);
+      padding-bottom: 5px;
+    }
+    .list-image {
+      padding: 5px 0 10px;
+      overflow: hidden;
+      li {
+        float: left;
+        margin-right: 1%;
+        width: 32.5%;
+        &:last-child {
+          margin: 0;
+        }
+      }
+      .image {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 110px;
+        img {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+    }
+    .content {
+      .title {
+        color: #666;
+        @include rem('font-size', 13);
+      }
+      .row {
+        padding: 3px 0 5px;
+        overflow: hidden;
+        .rating {
+          float: left;
+          .number {
+            color: $primary-color;
+            @include rem('font-size', 14);
+            font-weight: 700;
+          }
+        }
+        .review {
+          color: #666;
+          @include rem('font-size', 14);
+          float: right;
+        }
+        .ficon-comment-black-oval-bubble-shape {
+          color: $primary-color;
+          margin-right: 7px;
+        }
+      }
+      .price {
+        color: #666;
+        @include rem('font-size', 13);
+        .number {
+          color: #333;
+        }
+      }
+    }
+    .rating {
+      padding: 2px 0;
+      .star {
+        padding-top: 1px;
+        text-align: left;
+      }
+      .list-star {
+        line-height: 15px;
+        .ficon {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}

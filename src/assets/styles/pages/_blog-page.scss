@@ -1,0 +1,143 @@
+.blog-page-container {
+  .user-info-container {
+    .button-action {
+      float: none;
+      width: 100%;
+      margin: 0;
+    }
+    .button-action-gray {
+      background-color: #9b9b9b;
+    }
+  }
+  .blog-page-form {
+    .main-title {
+      border-bottom: 0;
+      box-shadow: none;
+    }
+  }
+  .list-checkbox {
+    .item {
+      padding: 13px 20px;
+      border-bottom: 1px solid #e8e8e8;
+      display: flex;
+      @include justify-content(stretch);
+      @include align-items(center);
+      white-space: nowrap;
+      .checkbox-custom {
+        width: 35px;
+        label.checkbox-label {
+          padding: 0;
+          width: 18px;
+        }
+      }
+      .title {
+        color: #333;
+        display: block;
+        @include rem('font-size', 14);
+        padding-bottom: 5px;
+      }
+      .row {
+        overflow: hidden;
+      }
+      .date-time {
+        color: #999;
+        @include rem('font-size', 13);
+        font-weight: 300;
+      }
+      .favourite {
+        float: right;
+        .ficon-heart {
+          float: left;
+          margin: 5px 5px 0 0;
+        }
+        .ficon-heart, .number {
+          color: #666;
+          @include rem('font-size', 13);
+        }
+      }
+      .content {
+        min-width: calc(100% - 85px);
+        padding: 0 20px 0 0;
+      }
+      .group-action-button {
+        width: 46px;
+        .btn-action {
+          background-color: $primary-color;
+          border: none;
+          border-radius: 1px;
+          color: #fff;
+          display: block;
+          width: 46px;
+          height: 20px;
+        }
+        .btn-delete {
+          background-color: #9c9c9c;
+        }
+      }
+    }
+  }
+  .blog-page-close-container {
+    .footer-bar {
+      border-top: 0;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      overflow: hidden;
+      .button-link {
+        background-color: $primary-color;
+        border-radius: 2px;
+        color: #fff;
+        @include rem('font-size', 12);
+        float: left;
+        padding: 5px 10px;
+      }
+    }
+  }
+  .link-container {
+    margin-top: 15px;
+    margin-bottom: 0;
+    .button {
+      background-color: #fff;
+      min-height: 35px;
+      @include rem('line-height', 35);
+      .ficon {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.toggle-base {
+  height: 100%;
+}
+
+.toggle-enter {
+  animation-name: fadeInLeft;
+  animation-duration: 500ms;
+}
+.toggle-leave {
+  animation-name: fadeOutLeft;
+  animation-duration: 500ms;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+}

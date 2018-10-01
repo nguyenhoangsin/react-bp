@@ -1,0 +1,305 @@
+.personal-container {
+  .footer-bar {
+    .button-link {
+      color: #333;
+      @include rem('font-size', 13);
+    }
+    .ficon-next {
+      font-size: 9px;
+    }
+  }
+  .file-upload-form {
+    color: #fff;
+    @include rem('font-size', 13);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    @include align-items(center);
+    @include justify-content(center);
+    z-index: 10;
+    .input-file {
+      opacity: 0;
+      position: absolute;
+      @include rem('font-size', 100);
+    }
+    .ficon-photo-camera {
+      margin: 0 7px 0 0;
+      @include rem('font-size', 15);
+    }
+  }
+  .personal-banner-container {
+    position: relative;
+    .file-upload-form {
+      position: absolute;
+      bottom: 10px;
+      right: 15px;
+    }
+    .image {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      min-height: 120px;
+      overflow: hidden;
+      img {
+        opacity: 0;
+        visibility: hidden;
+      }
+      &::before {
+        background-color: rgba(0, 0, 0, .3);
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .wrap-user-info {
+    position: relative;
+    padding-bottom: 40px;
+    .personal-avatar {
+      background-color: #fff;
+      width: 95px;
+      padding: 2px;
+      position: absolute;
+      left: 20px;
+      top: -55px;
+    }
+    .image-avatar {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 91px;
+      overflow: hidden;
+      img {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    .upload-avatar {
+      padding: 7px;
+      text-align: center;
+      .file-upload-form {
+        color: #666;
+      }
+    }
+    .username {
+      color: #121212;
+      @include rem('font-size', 22);
+      font-weight: 700;
+      padding: 20px 0 0 135px;
+      .text {
+        width: calc(100% - 65px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+    .button-edit {
+      color: #999;
+      @include rem('font-size', 13);
+      float: right;
+      margin: 5px 10px 0 0;
+      .ficon-next {
+        font-size: 9px;
+      }
+    }
+  }
+  .tab-user {
+    .item {
+      width: 50%;
+      float: left;
+      a {
+        border: 1px solid #ebebeb;
+        color: #656262;
+        display: block;
+        padding: 10px;
+        text-align: center;
+        position: relative;
+        &::after {
+          background-color: transparent;
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+        }
+      }
+      &.active {
+        a {
+          color: $primary-color;
+          &::after {
+            background-color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+  .my-review-container {
+    .my-review-list {
+      .item {
+        overflow: hidden;
+        margin: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 35px #ebebeb;
+      }
+      .title {
+        color: #333;
+        @include rem('font-size', 15);
+      }
+      .address {
+        padding-top: 5px;
+        .ficon-location {
+          float: left;
+          margin-right: 3px;
+        }
+        .text {
+          overflow: hidden;
+          display: inline-block;
+        }
+      }
+      .image {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        float: left;
+        width: 110px;
+        height: 110px;
+        img {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+      .content {
+        padding: 10px 12px;
+        overflow: hidden;
+        .row {
+          padding-bottom: 1px;
+        }
+        .favourite {
+          float: right;
+          .ficon-heart {
+            float: left;
+            margin: 5px 5px 0 0;
+          }
+          .ficon-heart, .number {
+            color: #666;
+            @include rem('font-size', 13);
+          }
+        }
+        .text {
+          color: #666;
+          @include rem('font-size', 13);
+        }
+        .rating {
+          color: $primary-color;
+          @include rem('font-size', 15);
+          padding-top: 3px;
+        }
+        .text-link {
+          color: #666;
+          @include rem('font-size', 12);
+          float: right;
+          margin-top: 5px;
+          .ficon-next {
+            font-size: 7px;
+            margin-left: 3px;
+          }
+        }
+      }
+    }
+    .rating {
+      padding: 2px 0;
+      .number {
+        @include rem('font-size', 13);
+      }
+      .star {
+        padding-top: 0;
+        text-align: left;
+      }
+      .list-star {
+        line-height: 14px;
+        .ficon {
+          font-size: 12px;
+        }
+      }
+    }
+    .group-button {
+      border: none;
+      background-color: #f8f8f8;
+    }
+    .link-container {
+      border-top: 1px solid #e6e6e6;
+      .wrap-button {
+        padding: 13px 20px;
+      }
+      .button-more-info {
+        background-color: $primary-color;
+      }
+    }
+  }
+  .my-followers-container {
+    background-color: #fff;
+    overflow: hidden;
+    .my-follower-list {
+      padding: 5px;
+    }
+    .item {
+      float: left;
+      width: 50%;
+      min-height: 66px;
+      text-align: center;
+      padding: 17px;
+    }
+    .follower-item {
+      overflow: hidden;
+      .title {
+        color: #656262;
+        display: block;
+        @include rem('font-size', 13);
+      }
+    }
+    .image {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: block;
+      height: 146px;
+      img {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    .username {
+      color: #333;
+      display: block;
+      @include rem('font-size', 14);
+      font-weight: 700;
+      padding-top: 10px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+  .link-container {
+    .button {
+      background-color: #fff;
+      color: #333;
+      display: block;
+      padding: 7px 20px;
+      min-height: 40px;
+      @include rem('line-height', 40);
+      font-weight: 700;
+      .ficon {
+        color: $primary-color;
+        float: left;
+        font-size: 17px;
+        margin: 12px 15px 0 0;
+      }
+    }
+  }
+}

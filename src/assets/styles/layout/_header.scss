@@ -1,0 +1,86 @@
+.header-container {
+  background: url(#{$img-url}/bg-header.png) no-repeat 0 0;
+  background-size: cover;
+  min-height: 121px;
+  padding: 16px 20px;
+  &.fix-header-height {
+    min-height: 223px;
+  }
+  .button-open-menu {
+    float: left;
+    z-index: 10;
+  }
+  .logo {
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 16px;
+    z-index: 5;
+  }
+  .user-login {
+    float: right;
+    position: relative;
+    padding-top: 17px;
+    z-index: 10;
+    .ficon {
+      color: $primary-color;
+      font-size: 13px;
+    }
+    .text {
+      color: #fff;
+      @include rem('font-size', 14);
+    }
+  }
+}
+.button-open-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 22px;
+  height: 14px;
+  position: relative;
+  @include transform(rotate(0deg));
+  @include transition(.5s ease-in-out);
+  span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    @include transform(rotate(0deg));
+    @include transition(.25s ease-in-out);
+  }
+  span:nth-child(1) {
+    top: 0px;
+  }
+  span:nth-child(2), span:nth-child(3) {
+    top: 6px;
+  }
+  span:nth-child(4) {
+    top: 12px;
+  }
+  &.open {
+    span:nth-child(1) {
+      top: 6px;
+      width: 0%;
+      left: 50%;
+    }
+    span:nth-child(2) {
+      @include transform(rotate(45deg));
+    }
+    span:nth-child(3) {
+      @include transform(rotate(-45deg));
+    }
+    span:nth-child(4) {
+      top: 6px;
+      width: 0%;
+      left: 50%;
+    }
+  }
+}

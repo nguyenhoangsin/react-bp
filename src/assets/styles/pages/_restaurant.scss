@@ -1,0 +1,134 @@
+.breadcrumb-container {
+  .ficon-home {
+    color: $primary-color;
+    float: left;
+    margin: 2px 7px 0 0;
+  }
+}
+
+.restaurant-container {
+  .restaurant-list {
+    .item {
+      overflow: hidden;
+      margin: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 35px #ebebeb;
+    }
+    .image {
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      float: right;
+      width: 103px;
+      height: 130px;
+      img {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    .content {
+      padding: 12px;
+      overflow: hidden;
+      .title {
+        color: #333;
+        @include rem('font-size', 13);
+        padding-bottom: 4px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .address {
+        color: #666;
+        @include rem('font-size', 13);
+        padding-bottom: 4px;
+      }
+      .txt-title {
+        color: #666;
+        @include rem('font-size', 13);
+        padding-bottom: 2px;
+      }
+      .rating {
+        padding-bottom: 2px;
+        .number {
+          color: $primary-color;
+          @include rem('font-size', 12);
+        }
+      }
+      .favourite {
+        padding-bottom: 4px;
+        .ficon {
+          float: left;
+          margin: 5px 5px 0 0;
+        }
+        .ficon, .number {
+          color: #666;
+          @include rem('font-size', 13);
+        }
+      }
+      .text {
+        color: #666;
+        @include rem('font-size', 13);
+        padding-bottom: 7px;
+      }
+      .date {
+        color: #666;
+        @include rem('font-size', 12);
+        padding-bottom: 5px;
+      }
+      .text-link {
+        color: #666;
+        @include rem('font-size', 12);
+        float: right;
+        margin-top: 2px;
+        .ficon-next {
+          font-size: 7px;
+          margin-left: 3px;
+        }
+      }
+      .comment-text {
+        padding-top: 3px;
+        .text {
+          padding-bottom: 0;
+        }
+      }
+    }
+    .rating {
+      padding: 2px 0;
+      .star {
+        padding-top: 0;
+        text-align: left;
+      }
+      .list-star {
+        line-height: 14px;
+        .ficon {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .group-button {
+    border-top: 1px solid #e6e6e6;
+    padding: 20px;
+    overflow: hidden;
+    .button-action {
+      background-color: $primary-color;
+      border-radius: 3px;
+      color: #fff;
+      @include rem('font-size', 13);
+      float: left;
+      margin-right: 4%;
+      overflow: hidden;
+      text-align: center;
+      width: 48%;
+      height: 50px;
+      display: flex;
+      @include align-items(center);
+      @include justify-content(center);
+      flex-direction: column;
+      span {
+        order: 2;
+        display: block;
+      }
+    }
+  }
+}

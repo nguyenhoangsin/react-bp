@@ -1,0 +1,137 @@
+.main-form {
+  padding: 20px;
+  .input-group {
+    margin-bottom: 14px;
+  }
+  .input-control {
+    @extend .reset-input;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 2px;
+    color: #000;
+    @include rem('font-size', 12);
+    padding: 10px 25px;
+    width: 100%;
+    height: 50px;
+    @include transition(.3s ease-in-out);
+    &:focus {
+      border-color: $primary-color;
+      @include transition(.3s ease-in-out);
+    }
+  }
+  textarea.input-control {
+    width: 100% !important;
+    height: 100px;
+  }
+  .input-control::-webkit-input-placeholder {
+    color: #9f9a8f;
+  }
+  .input-control::-moz-placeholder {
+    color: #9f9a8f;
+  }
+  .input-control:-ms-input-placeholder {
+    color: #9f9a8f;
+  }
+  .input-control:-moz-placeholder {
+    color: #9f9a8f;
+  }
+  .text-validate {
+    display: block;
+    @include rem('font-size', 12);
+    padding-top: 5px;
+    &.error {
+      color: #b60000;
+    }
+  }
+  .forgot-link, .create-account-link {
+    color: #666;
+    @include rem('font-size', 12);
+    font-weight: 600;
+    display: inline-block;
+    margin: 5px 0 10px;
+  }
+  .create-account-link {
+    color: #999;
+    float: right;
+    margin: 15px 0 0;
+    @include rem('font-size', 11);
+    .ficon-next {
+      font-size: 10px;
+    }
+  }
+  .button-group {
+    button {
+      @extend .reset-input;
+      border-radius: 3px;
+      text-transform: uppercase;
+      position: relative;
+      .ficon {
+        @include rem('font-size', 16);
+        float: left;
+        width: 46px;
+        height: 50px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        text-align: center;
+        line-height: 50px;
+      }
+    }
+    .button-social, .button-submit {
+      color: #fff;
+      @include rem('font-size', 14);
+      height: 50px;
+    }
+    .button-twitter {
+      background-color: #2a9cec;
+      width: 48%;
+    }
+    .button-google {
+      background-color: #d11919;
+      float: left;
+      margin-right: 4%;
+      width: 48%;
+    }
+    .button-facebook {
+      background-color: #2061d7;
+      margin: 4% 0;
+      width: 100%;
+    }
+    .button-submit {
+      background-color: $primary-color;
+      margin-top: 4%;
+      width: 100%;
+      cursor: pointer;
+      &:disabled {
+        cursor: not-allowed;
+      }
+    }
+  }
+  .select-picker {
+    .select2-container .select2-selection--single {
+      background-color: #fff;
+      border: 1px solid #e8e8e8;
+      border-radius: 2px;
+      height: 50px;
+      @include rem('font-size', 12);
+      padding: 10px 25px 10px 50px;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+      padding-left: 0;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+      width: 40px;
+      height: 50px;
+      b {
+        border: none;
+        margin-top: -8px;
+        &::after {
+          font-family: 'hotessbar';
+          content: "\e921";
+          color: #8b8b8b;
+          font-size: 9px;
+        }
+      }
+    }
+  }
+}

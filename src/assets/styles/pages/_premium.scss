@@ -1,0 +1,316 @@
+.premium-container {
+  margin-top: -130px;
+  .introduction {
+    .intro-title {
+      color: #fff;
+      @include rem('font-size', 32);
+      font-weight: 600;
+      text-align: center;
+    }
+    .intro-description {
+      color: #c4c4c4;
+      @include rem('font-size', 16);
+      font-weight: 600;
+      text-align: center;
+      padding-top: 5px;
+    }
+  }
+  .search-form {
+    .input-group {
+      float: left;
+      margin: 0;
+      width: 43%;
+      &:first-child .input-control {
+        border-right: 1px solid #ebebeb;
+        border-radius: 3px 0 0 3px;
+      }
+    }
+    .input-control {
+      border: none;
+      border-radius: 0;
+    }
+    .button-group {
+      float: left;
+      width: 14%;
+    }
+    .button-submit {
+      border-radius: 0 3px 3px 0;
+      margin: 0;
+    }
+  }
+  .search-types {
+    padding: 0 20px;
+    .seach-box {
+      background-color: #fff;
+      border-bottom: 2px solid $primary-color;
+      border-radius: 3px;
+      box-shadow: 0 0 3px #efefef;
+      float: left;
+      text-align: center;
+      padding: 14px;
+      width: 47.5%;
+      &:first-child {
+        margin-right: 5%;
+      }
+    }
+    .image {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    .text-search {
+      color: #656262;
+      display: block;
+      @include rem('font-size', 12);
+      font-weight: 600;
+      padding-top: 5px;
+    }
+  }
+  .search-list {
+    margin-top: 5%;
+    clear: both;
+  }
+  .search-actions-list {
+    border-top: 1px solid #e8e8e8;
+    .item {
+      background-color: #fff;
+      border-bottom: 1px solid #e8e8e8;
+      .list {
+        display: none;
+        margin-left: 63px;
+        .sub-item {
+          border-top: 1px solid #e8e8e8;
+          a {
+            display: inline-block;
+            padding: 8px 25px 8px 0;
+            @include rem('font-size', 13);
+          }
+        }
+        .list {
+          margin-left: 20px;
+        }
+        .ficon-next, .ficon-next2, .ficon {
+          padding: 7px 25px 0 0;
+        }
+      }
+      a {
+        color: #656262;
+        display: block;
+        @include rem('font-size', 14);
+        font-weight: 700;
+        padding: 15px 25px 13px;
+        line-height: 19px;
+      }
+      .ficon-first {
+        color: $primary-color;
+        @include rem('font-size', 17);
+        min-width: 24px;
+        margin-right: 14px;
+        float: left;
+      }
+      .ficon-next, .ficon-next2, .ficon {
+        color: #83827f;
+        float: right;
+        @include rem('font-size', 12);
+        margin-top: 5px;
+      }
+    }
+
+    .search-actions-list {
+      padding-left: 10px;
+      .item:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+  .evaluation-content {
+    padding: 18px 20px;
+  }
+  .evaluation-list {
+    .item {
+      background-color: #fff;
+      box-shadow: 0 0 35px #ebebeb;
+      margin-bottom: 18px;
+      min-height: 72px;
+      position: relative;
+      &:last-child {
+        margin: 0;
+      }
+    }
+    .image {
+      background-position: center;
+      background-size: cover;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 72px;
+      height: 100%;
+      img {
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+    .content {
+      overflow: hidden;
+      padding: 14px 30px 14px 13px;
+      width: calc(100% - 72px);
+      .row {
+        clear: both;
+        padding-top: 5px;
+        overflow: hidden;
+      }
+      .list {
+        li {
+          float: left;
+          width: 33.33%;
+        }
+      }
+      .text, .name, .category {
+        color: #333;
+        display: block;
+        @include rem('font-size', 14);
+        font-weight: 700;
+        padding-right: 13px;
+      }
+      .name {
+        text-align: center;
+      }
+      .category {
+        text-align: right;
+      }
+      .title {
+        color: #656565;
+        @include rem('font-size', 14);
+        font-weight: 700;
+      }
+      .text-link {
+        color: #666;
+        float: right;
+        @include rem('font-size', 13);
+        font-weight: 700;
+        .ficon-next {
+          font-size: 9px;
+        }
+      }
+    }
+  }
+  .premium-list {
+    padding: 18px 20px;
+    .item {
+      background-color: #fff;
+      box-shadow: 0 0 35px #ebebeb;
+      margin-bottom: 18px;
+      min-height: 72px;
+      position: relative;
+      &:last-child {
+        margin: 0;
+      }
+    }
+    .header {
+      padding: 15px 20px;
+      .text-title {
+        color: #333;
+        @include rem('font-size', 14);
+        font-weight: 700;
+      }
+      .text-gray {
+        color: #666;
+        @include rem('font-size', 13);
+      }
+    }
+    .image-banner {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 100px;
+      overflow: hidden;
+      img {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    .content {
+      padding: 15px 20px;
+    }
+    .item-info {
+      padding-bottom: 15px;
+      border-bottom: 1px dotted #e5e5e5;
+      .name {
+        color: #333;
+        @include rem('font-size', 14);
+        padding-bottom: 2px;
+      }
+      .rating {
+        .number {
+          @include rem('font-size', 13);
+          padding: 3px 5px 0 0;
+        }
+        .star {
+          padding: 0;
+          text-align: left;
+          li {
+            .ficon {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      .image {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border: 1px solid #e5e5e5;
+        border-radius: 50px;
+        float: left;
+        margin-right: 15px;
+        width: 60px;
+        height: 60px;
+        overflow: hidden;
+        img {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+      .info {
+        overflow: hidden;
+        padding-top: 10px;
+      }
+      .review {
+        float: right;
+        @include rem('font-size', 13);
+        color: #666;
+        .ficon {
+          color: $primary-color;
+          margin-right: 5px;
+        }
+      }
+    }
+    .item-content {
+      color: #666;
+      @include rem('font-size', 14);
+      clear: both;
+      overflow: hidden;
+      padding-top: 15px;
+    }
+  }
+  .list-container {
+    .ficon-plus {
+      float: right;
+    }
+  }
+
+  .Select-control {
+    border-radius: 0;
+    border: none;
+    height: 50px;
+    .Select-placeholder, .Select-input, .Select-value {
+      font-size: 12px;
+      margin-top: 9px;
+      margin-left: 12px;
+    }
+  }
+}

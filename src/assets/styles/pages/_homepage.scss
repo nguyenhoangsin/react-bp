@@ -1,0 +1,44 @@
+.main-container {
+  .block-container {
+    background-color: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    .main-title {
+      border-bottom: 1px solid #e5e5e5;
+      box-shadow: 0 0 4px #eee;
+      color: #333;
+      @include rem('font-size', 15);
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 13px 20px;
+    }
+    .block-title {
+      color: #333;
+      @include rem('font-size', 16);
+      font-weight: 700;
+      padding: 0 20px;
+      text-transform: uppercase;
+    }
+    .footer-bar {
+      border-top: 1px solid #e1e1e1;
+      font-weight: 700;
+      text-align: right;
+      padding: 7px 20px 13px;
+      .view-more {
+        color: #333;
+        display: inline-block;
+        @include rem('font-size', 13);
+        .ficon-next {
+          font-size: 9px;
+        }
+      }
+    }
+  }
+  .restaurant-container {
+    background-color: transparent;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

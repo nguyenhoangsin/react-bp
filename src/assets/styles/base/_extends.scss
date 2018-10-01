@@ -1,0 +1,135 @@
+.reset-input {
+  background: none;
+  border: none;
+  outline: none;
+}
+.breadcrumb-container {
+  padding: 10px 20px;
+  white-space: nowrap;
+  overflow: auto;
+  li {
+    color: #121212;
+    display: inline-block;
+    text-transform: uppercase;
+    padding-right: 15px;
+    position: relative;
+    min-height: 22px;
+    @include rem('line-height', 19);
+    &:last-child {
+      margin: 0;
+      padding: 0;
+      &::after {
+        display: none;
+      }
+    }
+    .ficon-prev {
+      font-size: 9px;
+    }
+    &::after {
+      font-family: 'hotessbar';
+      font-size: 10px;
+      content: '\e910';
+      position: absolute;
+      top: 1px;
+      right: 0;
+    }
+    a {
+      color: #121212;
+    }
+  }
+}
+.container-title {
+  color: #121212;
+  @include rem('font-size', 21);
+  font-weight: 700;
+  padding: 10px 20px;
+}
+.rating {
+  overflow: hidden;
+  .number {
+    color: $primary-color;
+    @include rem('font-size', 23);
+    font-weight: 700;
+    float: left;
+  }
+  .star {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 2px 0 0 7px;
+    li {
+      display: inline-block;
+      .ficon {
+        font-size: 20px;
+        color: $primary-color;
+      }
+      .empty {
+        color: #e0e0e0;
+      }
+    }
+    span {
+      display: inline-block;
+      .ficon {
+        font-size: 20px;
+        color: $primary-color;
+      }
+      .ficon-star-rating {
+        padding-right: 2px;
+      }
+      .empty {
+        color: #e0e0e0;
+      }
+    }
+  }
+}
+
+
+.loader {
+  display: inline-block;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+}
+
+/*	$Loader Quadrant
+	========================================================================== */
+.loader-quart {
+  border-radius: 50px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}
+.loader-quart:after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  border-top-color: #000;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    tranform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    tranform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    tranform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    tranform: rotate(360deg);
+  }
+}

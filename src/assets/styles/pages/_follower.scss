@@ -1,0 +1,51 @@
+.follower-container {
+  .follower-list {
+    padding: 1px 0;
+    .item {
+      overflow: hidden;
+      margin: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 35px #ebebeb;
+    }
+    .image {
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      float: left;
+      width: 91px;
+      height: 91px;
+      img {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    .content {
+      padding: 10px 12px;
+      overflow: hidden;
+      .title {
+        color: #333;
+        @include rem('font-size', 14);
+        padding-bottom: 3px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .favourite {
+        padding-bottom: 4px;
+        .ficon-heart {
+          float: left;
+          margin: 5px 5px 0 0;
+        }
+        .ficon-heart, .number {
+          color: #666;
+          @include rem('font-size', 13);
+        }
+      }
+      .text {
+        color: #666;
+        @include rem('font-size', 13);
+        padding-bottom: 7px;
+      }
+    }
+  }
+}
